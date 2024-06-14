@@ -4,7 +4,7 @@ go 1.22.4
 
 require (
 	github.com/hashicorp/go-hclog v1.6.3
-	github.com/moonen-home-automation/hass-ws-client v0.0.0-20240614195931-5baae4237918
+	github.com/moonen-home-automation/hass-ws-client v0.0.0-20240614201012-426a26731016
 	google.golang.org/grpc v1.64.0
 	google.golang.org/protobuf v1.34.2
 )
