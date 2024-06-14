@@ -1,3 +1,0 @@
-[submodule "addon-test"]
-	path = addon-test
-	url = https://github.com/moonen-home-automation/addon-test.git
