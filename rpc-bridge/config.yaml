@@ -1,0 +1,7 @@
+name: "gRPC Bridge"
+description: "Service that acts as a bridge between Home Assistant and other services. Translating gRPC calls into WebSocket commands."
+version: "1.0.0"
+slug: "grpc_bridge"
+init: false
+arch:
+- amd64
