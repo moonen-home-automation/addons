@@ -1,13 +1,38 @@
 package main
 
 import (
-	"fmt"
-	"time"
+	"net"
+	"os"
+
+	"github.com/hashicorp/go-hclog"
+	"github.com/moonen-home-automation/addons/grpc_bridge/internal/server"
+	"github.com/moonen-home-automation/addons/grpc_bridge/pkg/proto"
+	hass_client "github.com/moonen-home-automation/hass-ws-client"
+	"google.golang.org/grpc"
 )
 
 func main() {
-	for {
-		fmt.Println("Hello world '24!")
-		time.Sleep(time.Second * 2)
+	log := hclog.Default()
+
+	_, err := hass_client.InitializeAppInstance(hass_client.InitializeAppRequest{IpAddress: "supervisor/core/api", Secure: false, HAAuthToken: os.Getenv("SUPERVISOR_TOKEN")})
+	if err != nil {
+		log.Error("Hass client error", "error", err)
+		os.Exit(1)
 	}
+
+	gs := grpc.NewServer()
+
+	es := server.NewEventsServer(log)
+	proto.RegisterEventsServer(gs, es)
+
+	ss := server.NewServicesServer(log)
+	proto.RegisterServicesServer(gs, ss)
+
+	l, err := net.Listen("tcp", ":9091")
+	if err != nil {
+		log.Error("Unable to listen", "error", err)
+		os.Exit(1)
+	}
+
+	gs.Serve(l)
 }

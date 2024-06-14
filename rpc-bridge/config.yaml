@@ -5,3 +5,8 @@ slug: "grpc_bridge"
 init: false
 arch:
 - amd64
+homeassistant_api: true
+ports:
+  9091/tcp: 9091
+ports_description:
+  9091/tcp: gRPC
