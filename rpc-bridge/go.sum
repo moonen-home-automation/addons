@@ -23,6 +23,8 @@ github.com/moonen-home-automation/hass-ws-client v0.0.0-20240614125543-00b602fa8
 github.com/moonen-home-automation/hass-ws-client v0.0.0-20240614125543-00b602fa885c/go.mod h1:qYUcthB8oewzsUm/OHvZ+xJNNqM/6y92NDD+obuWE4s=
 github.com/moonen-home-automation/hass-ws-client v0.0.0-20240614130834-53cf437ef87f h1:wcOHbiY3OaZb7zw1KAzUVHXSS9KKGLK3WB9CJV1cpFA=
 github.com/moonen-home-automation/hass-ws-client v0.0.0-20240614130834-53cf437ef87f/go.mod h1:qYUcthB8oewzsUm/OHvZ+xJNNqM/6y92NDD+obuWE4s=
+github.com/moonen-home-automation/hass-ws-client v0.0.0-20240614182951-d47ff985e119 h1:6WxvMyxk4IH0Gi/K2nSsQW/JW/houDECgYPf+ZzoEvM=
+github.com/moonen-home-automation/hass-ws-client v0.0.0-20240614182951-d47ff985e119/go.mod h1:qYUcthB8oewzsUm/OHvZ+xJNNqM/6y92NDD+obuWE4s=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=

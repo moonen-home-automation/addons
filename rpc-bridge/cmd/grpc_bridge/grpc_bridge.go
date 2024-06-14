@@ -14,7 +14,7 @@ import (
 func main() {
 	log := hclog.Default()
 
-	_, err := hass_client.InitializeAppInstance(hass_client.InitializeAppRequest{IpAddress: "supervisor/core/api", Secure: false, HAAuthToken: os.Getenv("SUPERVISOR_TOKEN")})
+	_, err := hass_client.InitializeAppInstance(hass_client.InitializeAppRequest{URL: "ws://supervisor/core/websocket", Secure: false, HAAuthToken: os.Getenv("SUPERVISOR_TOKEN")})
 	if err != nil {
 		log.Error("Hass client error", "error", err)
 		os.Exit(1)
