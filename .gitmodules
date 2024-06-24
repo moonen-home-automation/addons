@@ -1,0 +1,3 @@
+[submodule "grpc-bridge"]
+	path = grpc-bridge
+	url = https://github.com/moonen-home-automation/grpc-bridge.git
